@@ -9,3 +9,6 @@
 -example to inside more items on array - shoppingList.$data.items.push('One more item')
 -v-for directive
 
+# User Inputs & Vue Devtools
+-Vue DevTools Extension
+-Example manipulating data
