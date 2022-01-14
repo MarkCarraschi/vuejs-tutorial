@@ -19,7 +19,7 @@
 
 # Vue Methods
 - methods directive
-- 
-- 
 
 # Conditional Rendering
+- v-if
+- v-else 
