@@ -19,7 +19,7 @@
 
         <div class="add-item-form">
             <input v-model="newItem" type="text" placeholder="Add an item">
-            <button class="btn btn-primary" v-on:click="items.push(newItem)" v-on:keyup.enter="items.push(newItem)">Save
+            <button class="btn btn-primary" v-on:click="saveItem" v-on:keyup.enter="saveItem">Save
                 Item</button>
         </div>
 
@@ -44,6 +44,12 @@
                     '2 board games',
                     '20 cups',
                 ]
+            },
+            methods: {
+                saveItem: function () {
+                    this.items.push(this.newItem);
+                    this.newItem = '';
+                }
             }
         });
     </script>

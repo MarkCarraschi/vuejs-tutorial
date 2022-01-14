@@ -16,3 +16,10 @@
 # User events
 - Can replace v-on to @
 - Events : click, keyup.enter
+
+# Vue Methods
+- methods directive
+- 
+- 
+
+# Conditional Rendering
