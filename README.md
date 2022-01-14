@@ -12,3 +12,7 @@
 # User Inputs & Vue Devtools
 -Vue DevTools Extension
 -Example manipulating data
+
+# User events
+- Can replace v-on to @
+- Events : click, keyup.enter
