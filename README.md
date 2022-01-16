@@ -27,3 +27,7 @@
 # Attribute Bindings
 - v-bind
 - dynamic link
+
+# Dynamic Classes
+- Use :class and add conditional in these think
+- Manipulate properties of array/list

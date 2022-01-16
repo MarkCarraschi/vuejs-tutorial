@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>shopping-list</title>
+    <link rel="stylesheet" href="main.css">
 
-    <!--
-        <link rel="stylesheet" href="main.css">
-    -->
 
 </head>
 
@@ -29,7 +27,10 @@
         <!-- <a v-bind:href="newItem" target="_blank">Dynamic Link</a> -->
 
         <ul>
-            <li v-for="item in items">{{ item }}</li>
+            <li v-for="item in items" :class="{strikeout: item.purchased}" @click="togglePurchased(item)">{{ item.label
+                }}</li>
+            <!-- <li v-for="item in items" class="priority" :class="[item.purchased ? 'strikeout' : '']"> 
+                {{ item.label }}</li>-->
         </ul>
         <p v-if="items.length === 0">Nice job! You've bought all your items</p>
     </div>
@@ -43,19 +44,39 @@
                 header: 'Vue is ready!',
                 newItem: '',
                 items: [
-                    // '10 party hats',
-                    // '2 board games',
-                    // '20 cups',
+                    {
+                        label: '10 party hats',
+                        purchased: false,
+                        hightPriority: false,
+                    },
+                    {
+                        label: '2 board games',
+                        purchased: true,
+                        hightPriority: false,
+                    },
+                    {
+                        label: '20 cups',
+                        purchased: false,
+                        hightPriority: true,
+                    }
                 ]
             },
             methods: {
                 saveItem: function () {
-                    this.items.push(this.newItem);
+                    this.items.push(
+                        {
+                            label: this.newItem,
+                            purchased: false,
+                        },
+                    );
                     this.newItem = '';
                 },
                 changeState: function (newState) {
                     this.state = newState;
                     this.newItem = '';
+                },
+                togglePurchased: function (item) {
+                    item.purchased = !item.purchased;
                 }
             }
         });
