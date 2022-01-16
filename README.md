@@ -23,3 +23,7 @@
 # Conditional Rendering
 - v-if
 - v-else 
+
+# Attribute Bindings
+- v-bind
+- dynamic link
