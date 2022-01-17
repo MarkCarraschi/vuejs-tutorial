@@ -31,3 +31,6 @@
 # Dynamic Classes
 - Use :class and add conditional in these think
 - Manipulate properties of array/list
+
+# Computed Properties
+- Some examples about it
